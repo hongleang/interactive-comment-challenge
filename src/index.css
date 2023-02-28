@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+body {
+    position: relative;
+}
+
+:root {
+    --blue: #5457b6;
+    --red: #ed6468;
+    --grey-blue: #c3c4ef;
+    --light-red: #ffb8bb;
+    --dark-blue: #324152;
+    --light-blue: #67727e;
+    --grey-light: #eaecf1;
+    --grey-lightest: #f5f6fa;
+    --white: #ffffff;
+
+    --bs-primary: var(--blue);
+    --bs-danger: var(--red);
+    --bs-light: var(--grey-lightest);
+
+    --bs-primary-rgb: 84, 87, 182;
+    --bs-danger-rgb: 237, 100, 104;
+
+    --bs-font-sans-serif: 'Rubik', sans-serif;
+}
+
+#root {
+    padding: 5rem 1rem;
+}
+
+.text-blue {
+    color: var(--blue);
+}
+
+.text-grey-blue {
+    color: var(--grey-blue);
+}
+
+.text-dark-blue {
+    color: var(--dark-blue);
+}
+
+.text-light-blue {
+    color: var(--light-blue);
+}
+
+.text-grey-light {
+    color: var(--grey-light);
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+    font-weight: 500;
+}
+
+.fw-md {
+    font-weight: 500 !important;
+}
+
+.bg-primary {
+    background-color: #5457b6 !important;
+}
+
+.bg-danger {
+    background-color: var(--bs-danger) !important;
+}
+
+textarea {
+    resize: none !important;
+}
+
+@media (min-width: 800px) {
+    .container {
+        max-width: 800px;
+    }
+}

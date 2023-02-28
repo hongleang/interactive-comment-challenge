@@ -1,0 +1,37 @@
+.vote-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bs-light);
+    margin-left: .2rem;
+    margin-right: .2rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    border-radius: 8px;
+    max-width: 50px;
+}
+
+.btn-vote {
+    background: none;
+    border: none;
+    width: 100%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--grey-blue);
+    transition: transform .3s linear, color .3s linear;
+}
+
+.btn-vote:hover {
+    color: var(--blue);
+}
+
+.btn-vote:active {
+    transform: scale(.8);
+}
+
+.vote-number {
+    color: var(--blue);
+    font-weight: 700;
+    transition: transform .01s cubic-bezier(0.075, 0.82, 0.165, 1);
+}

@@ -1,0 +1,14 @@
+.divider {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.divider::before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    border-left: 2px solid var(--grey-light);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,14 @@
+.avatar.lg {
+    width: 40px;
+}
+
+.btn-submit {
+    background: var(--blue) !important;
+    font-weight: 500 !important;
+    color: white !important;
+}
+
+#comment-box {
+    height: 100px;
+    resize: none;
+}

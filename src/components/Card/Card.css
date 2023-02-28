@@ -1,0 +1,49 @@
+.card-heading {
+    display: inline-block;
+}
+
+.avatar {
+    width: 30px;
+}
+
+.reply-btn {
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--blue);
+    transition: opacity .2s linear, transform .1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.reply-btn:hover {
+    opacity: .8;
+}
+
+.reply-btn:active {
+    transform: scale(.97);
+}
+
+.edit-btn {
+    border: none !important;
+    font-weight: 500 !important;
+    transition: opacity .2s linear, transform .1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.edit-btn.btn-primary {
+    color: var(--bs-danger) !important;
+}
+
+.edit-btn.btn-danger {
+    color: var(--bs-primary) !important;
+}
+
+.edit-btn:active,
+.edit-btn:hover {
+    background: none !important;
+}
+
+.edit-btn:active {
+    transform: scale(.97);
+}
+
+.edit-btn:hover {
+    opacity: .8;
+}
