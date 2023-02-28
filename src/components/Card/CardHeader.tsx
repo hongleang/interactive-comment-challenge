@@ -15,7 +15,7 @@ type Props = {
 }
 
 export default function CardHeader({ user, createdAt, currentUser, replyBtnHandler, onDeleteComment, editMode, setEditMode }: Props) {
-    const { username, image: { png } } = user;
+    const { username } = user;
     const imageUrl = avatarImg[username as keyof typeof avatarImg];
 
     const { username: curUsername } = currentUser;
