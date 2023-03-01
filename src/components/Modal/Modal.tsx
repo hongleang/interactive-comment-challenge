@@ -8,7 +8,9 @@ type Props = {
 }
 
 export default function Modal({ modalIsOpen, onFunction }: Props) {
-    const { closeModal } = useContext(AppContext);
+    const { modalHandler } = useContext(AppContext);
+    if (!modalHandler) return null;
+    const { closeModal } = modalHandler
 
     const handleDelete = () => {
         closeModal()

@@ -15,7 +15,9 @@ type Props = {
 }
 
 export default function Card({ detail: { content, user, score, createdAt, id, replyingTo }, currentUser, toggleCommentBox, parentComment }: Props) {
-  const { handleSelectedEditComment, onEdit } = useContext(AppContext);
+  const { commentHandler } = useContext(AppContext);
+  if (!commentHandler) return null;
+  const { handleSelectedEditComment, onEdit } = commentHandler;
   const replyBtnHandler = () => toggleCommentBox && toggleCommentBox(parentComment ? parentComment.id : id, user.username);
 
   const onDeleteComment = () => {

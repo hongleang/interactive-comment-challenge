@@ -8,7 +8,9 @@ type Props = {
 }
 
 export default function EditBtn({ onDeleteComment, editMode, setEditMode }: Props) {
-    const { closeModal, openModal } = useContext(AppContext);
+    const { modalHandler } = useContext(AppContext);
+    if (!modalHandler) return null;
+    const { openModal } = modalHandler;
 
     const handleDelete = () => {
         openModal();
