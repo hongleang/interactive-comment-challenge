@@ -49,7 +49,7 @@ export default function Card({ detail: { content, user, score, createdAt, id, re
         </div>
         <div>
           <CardHeader {...{ user, createdAt, currentUser, replyBtnHandler, onDeleteComment, editMode, setEditMode }} />
-          {editMode ? <EditTextArea {...{ onSubmitEdit, content }} /> : <p className="text-light-blue mt-3">
+          {editMode ? <EditTextArea {...{ onSubmitEdit, content }} /> : <p role="comment-content" className="text-light-blue mt-3">
             {replyingTo && <span className="text-blue fw-md">@{replyingTo} </span>}
             {content}
           </p>}
