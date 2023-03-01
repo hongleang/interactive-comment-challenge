@@ -44,7 +44,7 @@ export default function Card({ detail: { content, user, score, createdAt, id, re
   return (
     <>
       <div className="d-flex border-0 shadow rounded-2 p-4 mb-3 bg-white">
-        <div className="d-none d-sm-block me-3" style={{ minWidth: 55 }}>
+        <div className="d-none d-sm-block me-3" style={{ minWidth: 45 }}>
           <VoteButton {...{ score }} />
         </div>
         <div>
