@@ -40,7 +40,7 @@ export default function AddCommentBox({ addComment, addReply, parentComment, typ
     return (
         <div className="my-4">
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="row border-0 shadow rounded-2 p-4">
+                <div className="row border-0 shadow rounded-2 p-4 bg-white">
                     <div className="d-none d-sm-block col-1">
                         <img className="avatar lg" src={imageUrl} alt="curUser-avatar" />
                     </div>

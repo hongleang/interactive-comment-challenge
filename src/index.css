@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 
-body {
-    position: relative;
-}
-
 :root {
     --blue: #5457b6;
     --red: #ed6468;
@@ -25,8 +21,13 @@ body {
     --bs-font-sans-serif: 'Rubik', sans-serif;
 }
 
+body {
+    position: relative;
+}
+
 #root {
     padding: 5rem 1rem;
+    background-color: var(--grey-lightest);
 }
 
 .text-blue {
