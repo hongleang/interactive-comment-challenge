@@ -22,7 +22,7 @@ export default function CardHeader({ user, createdAt, currentUser, replyBtnHandl
 
     return (
         <div className="d-flex align-items-center justify-content-between">
-            <div role="card-header" className="card-heading col-sm-7">
+            <div role="contentinfo" className="card-heading col-sm-7">
                 <img className="avatar" src={imageUrl} alt="user-avatar" />
                 <span className="text-grey mx-2 fw-md">{username}</span>
                 {curUsername === username && <span className="px-1 fw-md bg-primary me-2 text-white">you</span>}

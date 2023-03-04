@@ -20,7 +20,7 @@ export default function VoteButton({ score, horizontal }: Props) {
     return (
         <div className="vote-btn" style={horizontal ? horVoteBtnStyle : {}}>
             <button className="btn-vote" onClick={() => setVote(vote + 1)}>+</button>
-            <div role="vote-number" className="vote-number">{vote}</div>
+            <div role="complementary" className="vote-number">{vote}</div>
             <button className="btn-vote" onClick={() => setVote(vote - 1)}>-</button>
         </div>
     )
