@@ -41,11 +41,11 @@ export default function AddCommentBox({ addComment, addReply, parentComment, typ
         <div className="my-4">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="row border-0 shadow rounded-2 p-4 bg-white">
-                    <div role="banner" className="d-none d-sm-block col-1">
+                    <div className="d-none d-sm-block col-1">
                         <img className="avatar lg" src={imageUrl} alt="curUser-avatar" />
                     </div>
 
-                    <div role="contentinfo" className="col-sm-9 px-sm-auto px-0">
+                    <div className="col-sm-9 px-sm-auto px-0">
                         <label className="d-none" htmlFor="commentBox"></label>
                         <textarea className="form-control w-100" id="comment-box" {...register("commentBox")} defaultValue={textareaDefaultVal}>
                         </textarea>
