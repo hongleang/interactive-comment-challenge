@@ -39,7 +39,7 @@ function App() {
     <AppContext.Provider value={{ modalHandler, commentHandler: { ...commentHandler, commentsData: commentsData.comments } }}>
       <Modal {...{ modalIsOpen, onFunction: onDeleting }} />
       <div className="container">
-        <h1 style={{ visibility: "hidden" }}>Interactive Comment Challenge</h1>
+        <h1 className="mb-2">Interactive Comment Challenge</h1>
         <CommentCards />
         <AddCommentBox {...{ type: "comment" }} />
       </div>
