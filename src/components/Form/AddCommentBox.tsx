@@ -46,7 +46,7 @@ export default function AddCommentBox({ addComment, addReply, parentComment, typ
                     </div>
 
                     <div className="col-sm-9 px-sm-auto px-0">
-                        <label className="d-none" htmlFor="commentBox"></label>
+                        <label className="" htmlFor="commentBox"></label>
                         <textarea className="form-control w-100" id="comment-box" {...register("commentBox")} defaultValue={textareaDefaultVal}>
                         </textarea>
                     </div>
