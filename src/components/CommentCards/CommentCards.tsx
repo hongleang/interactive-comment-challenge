@@ -12,7 +12,7 @@ export default function CommentCards() {
 
   if (!commentHandler) return <>Data Not found!</>
 
-  const { commentsData, currentUser, addReply } = commentHandler;
+  const { commentsData, currentUser, addReply, addComment } = commentHandler;
 
   return (
     <div className="row mw-100 mx-auto">
@@ -27,10 +27,10 @@ export default function CommentCards() {
               {comment?.replies?.map((subcomment) => {
                 return <Card key={"replyCard" + subcomment.id} {...{ detail: subcomment, currentUser, parentComment: comment, toggleCommentBox }} />
               })}
-              {displayReplyBox(comment.id) && <AddCommentBox {...{ parentComment: comment, addReply, type: "reply", replyToUser, closeReplyBox }} />}
+              {displayReplyBox(comment.id) && <AddCommentBox {...{ parentComment: comment, addReply, type: "reply", replyToUser, closeReplyBox, addComment }} />}
             </div>
           </div>}
-          {displayReplyBox(comment.id) && !hasReplies && <AddCommentBox {...{ parentComment: comment, addReply, type: "reply", replyToUser, closeReplyBox }} />}
+          {displayReplyBox(comment.id) && !hasReplies && <AddCommentBox {...{ parentComment: comment, addReply, type: "reply", replyToUser, closeReplyBox, addComment }} />}
         </div>
       })}
     </div>
