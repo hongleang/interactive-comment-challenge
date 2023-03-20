@@ -8,7 +8,7 @@ import avatarImg from "../../assets/ImageMapper/AvatarImageMapper";
 
 import "./AddCommentBox.css"
 
-export default function AddCommentBox({ addComment, addReply, parentComment, type, replyToUser, closeReplyBox }: FormHandlerProps) {
+export default function ({ addComment, addReply, parentComment, type, replyToUser, closeReplyBox }: FormHandlerProps) {
     const { register, reset, formState: { isSubmitSuccessful }, handleSubmit } = useForm<TextAreaInput>();
 
     const { commentHandler } = useContext(AppContext);
@@ -46,7 +46,7 @@ export default function AddCommentBox({ addComment, addReply, parentComment, typ
                     </div>
 
                     <div className="col-sm-9 px-sm-auto px-0">
-                        <label className="" htmlFor="commentBox"></label>
+                        <label className="d-none" htmlFor="commentBox"></label>
                         <textarea className="form-control w-100" id="comment-box" {...register("commentBox")} defaultValue={textareaDefaultVal}>
                         </textarea>
                     </div>

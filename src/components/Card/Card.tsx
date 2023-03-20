@@ -3,7 +3,7 @@ import CardHeader from "./CardHeader"
 
 import "./Card.css"
 import { CardComment, Comment, User } from "../../models/RootJson"
-import { useContext, useState } from "react"
+import { MouseEventHandler, useContext, useState } from "react"
 import AppContext from "../../context/AppContext"
 import EditTextArea from "../EditTextArea/EditTextArea"
 import EditBtn from "./EditBtn"
@@ -33,6 +33,13 @@ export default function Card({ detail: { content, user, score, createdAt, id, re
   const [editMode, setEditMode] = useState(false);
 
   const onSubmitEdit = (newContent: string) => {
+    if (newContent.length === 0) {
+      alert('New content can\'t be empty');
+      setEditMode(false);
+      return;
+    }
+    console.log("run function");
+    
     if (parentComment) {
       onEdit({ id, type: "reply", parentCommentId: parentComment.id, content: newContent })
     } else {
@@ -41,15 +48,19 @@ export default function Card({ detail: { content, user, score, createdAt, id, re
     setEditMode(false);
   }
 
+  const cancelAction = () => {
+    setEditMode(false);
+  };
+
   return (
     <>
       <div className="d-flex border-0 shadow rounded-2 p-4 mb-3 bg-white">
         <div className="d-none d-sm-block me-3" style={{ minWidth: 45 }}>
           <VoteButton {...{ score }} />
         </div>
-        <div>
+        <div className="col">
           <CardHeader {...{ user, createdAt, currentUser, replyBtnHandler, onDeleteComment, editMode, setEditMode }} />
-          {editMode ? <EditTextArea {...{ onSubmitEdit, content }} /> : <p className="text-light-blue mt-3">
+          {editMode ? <EditTextArea {...{ onSubmitEdit, content, cancelAction }} /> : <p className="text-light-blue mt-3">
             {replyingTo && <span className="text-blue fw-md">@{replyingTo} </span>}
             {content}
           </p>}

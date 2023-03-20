@@ -47,6 +47,8 @@ export function useFormHandler({ parentComment, currentUser, replyToUser, addCom
             user: currentUser,
             replies: []
         };
+        console.log('add');
+        
         if (addComment)
             addComment(newComment);
     }

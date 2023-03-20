@@ -14,6 +14,7 @@ function App() {
     commentsData,
     comments,
     onDeleting,
+    addComment,
     ...commentHandler
   } = useCommentsHandler(rootJson);
 
@@ -36,11 +37,11 @@ function App() {
   }, [modalIsOpen])
 
   return (
-    <AppContext.Provider value={{ modalHandler, commentHandler: { ...commentHandler, commentsData: commentsData.comments } }}>
+    <AppContext.Provider value={{ modalHandler, commentHandler: { ...commentHandler, commentsData: commentsData.comments, addComment } }}>
       <Modal {...{ modalIsOpen, onFunction: onDeleting }} />
       <div className="container">
         <CommentCards />
-        <AddCommentBox {...{ type: "comment" }} />
+        <AddCommentBox {...{ type: "comment", addComment }} />
       </div>
     </AppContext.Provider >
   )
