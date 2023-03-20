@@ -45,7 +45,7 @@ export default function ({ addComment, addReply, parentComment, type, replyToUse
                         <img className="avatar lg" src={imageUrl} alt="curUser-avatar" />
                     </div>
 
-                    <div className="col-sm-9 px-sm-auto px-0">
+                    <div className="col px-sm-auto px-2">
                         <label className="d-none" htmlFor="commentBox"></label>
                         <textarea className="form-control w-100" id="comment-box" {...register("commentBox")} defaultValue={textareaDefaultVal}>
                         </textarea>
@@ -57,18 +57,31 @@ export default function ({ addComment, addReply, parentComment, type, replyToUse
                         >
                             {type === "comment" ? "send" : "reply"}
                         </button>
+                        {type === "reply" && <button
+                            onClick={closeReplyBox}
+                            className="btn btn-danger text-uppercase w-100 mt-2"
+                        >
+                            Cancel
+                        </button>}
                     </div>
+                    {/* Mobile size reply btn */}
                     <div className="d-flex justify-content-between align-items-center px-0 mt-4">
                         <div className="d-block d-sm-none">
                             <img className="avatar lg" src={imageUrl} alt="curUser-avatar" />
                         </div>
-                        <div className="d-block d-sm-none w-25">
+                        <div className="d-flex d-sm-none">
                             <button
                                 type="submit"
-                                className="btn btn-submit text-uppercase w-100"
+                                className="btn btn-submit text-uppercase"
                             >
                                 {type === "comment" ? "send" : "reply"}
                             </button>
+                            {type === "reply" && <button
+                                onClick={closeReplyBox}
+                                className="btn btn-danger text-uppercase mx-2"
+                            >
+                                Cancel
+                            </button>}
                         </div>
                     </div>
                 </div>
